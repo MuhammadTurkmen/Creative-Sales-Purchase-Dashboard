@@ -1,5 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 @import "tailwindcss";
+@import "tailwindcss/utilities";
 
-body {
-  display: flex;
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
+
+.kaushan-script-regular {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
