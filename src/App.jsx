@@ -8,6 +8,7 @@ import Purchases from "./pages/Purchases";
 import Sales from "./pages/Sales";
 import Settings from "./pages/Settings";
 import Reports from "./pages/Reports";
+import MobileSidebar from "./Components/MobileSidebar";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
 
         <div className="flex-1 py-3 md:py-6 px-[29px]">
           <Navbar />
+          <MobileSidebar />
           <Routes>
             <Route path="/" element={<Overview />} />
             <Route path="inventory" element={<Inventory />} />

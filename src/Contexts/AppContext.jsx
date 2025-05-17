@@ -9,10 +9,17 @@ export const AppProvider = ({ children }) => {
     JSON.parse(localStorage.getItem("mode")) || false
   );
 
+  //   state for the mobile sidebar
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
+
   //   state for language
   const [language, setLanguage] = useState(
     localStorage.getItem("lang") || "en"
   );
+
+  // function or handlers for the mobile sidebar
+  const openMobileSidebar = () => setIsMobileSidebarOpen(true);
+  const closeMobileSidebar = () => setIsMobileSidebarOpen(false);
 
   //   function for toggling the mode
   const toggleDarkMode = () => setDarkMode((prev) => !prev);
@@ -41,7 +48,15 @@ export const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ darkMode, toggleDarkMode, language, changeLanguage }}
+      value={{
+        darkMode,
+        toggleDarkMode,
+        language,
+        changeLanguage,
+        isMobileSidebarOpen,
+        openMobileSidebar,
+        closeMobileSidebar,
+      }}
     >
       {children}
     </AppContext.Provider>

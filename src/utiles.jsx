@@ -6,37 +6,37 @@ export const links = [
   {
     id: 1,
     path: "/",
-    text: "Overview",
+    text: "overview",
     icon: <IoHome />,
   },
   {
     id: 2,
     path: "/sales",
-    text: "Sales",
+    text: "sales",
     icon: <GrOverview />,
   },
   {
     id: 3,
     path: "/purchases",
-    text: "Purchases",
+    text: "purchases",
     icon: <GrOverview />,
   },
   {
     id: 4,
     path: "/reports",
-    text: "Reports",
+    text: "reports",
     icon: <GrOverview />,
   },
   {
     id: 5,
     path: "/inventory",
-    text: "Inventory",
+    text: "inventory",
     icon: <GrOverview />,
   },
   {
     id: 6,
     path: "/settings",
-    text: "Settings",
+    text: "settings",
     icon: <FiSettings />,
   },
 ];

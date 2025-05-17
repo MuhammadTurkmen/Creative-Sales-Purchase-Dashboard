@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tailwindcss/utilities";
 
-/* ✅ Enable DaisyUI directly (v4 feature) */
+/* Enable DaisyUI directly (v4 feature) */
 @plugin "daisyui" {
   themes: [
     {
@@ -15,7 +15,7 @@
   ];
 }
 
-/* ✅ Add RTL support */
+/* Add RTL support */
 @layer base {
   [dir="rtl"] {
     direction: rtl;
@@ -26,7 +26,7 @@
   }
 }
 
-/* ✅ Optional: Custom font */
+/* adding custom font */
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 
 .kaushan-script-regular {
