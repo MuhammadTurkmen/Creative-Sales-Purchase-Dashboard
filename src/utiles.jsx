@@ -76,3 +76,24 @@ export const sellingsAndProfits = [
     subtitle: "Best-Selling",
   },
 ];
+
+// utiles.jsx
+export const lineChartData = [
+  { time: "10am", sales: 45 },
+  { time: "11am", sales: 60 },
+  { time: "12pm", sales: 55 },
+  { time: "01am", sales: 40 },
+  { time: "02am", sales: 70 },
+  { time: "03am", sales: 30 },
+  { time: "04am", sales: 35 },
+  { time: "05am", sales: 50 },
+  { time: "06am", sales: 65 },
+  { time: "07am", sales: 75 },
+];
+
+export const pieChartData = [
+  { name: "Sale", value: 50, fill: "#4338ca" }, // Indigo - Big
+  { name: "Distribute", value: 30, fill: "#facc15" }, // Yellow - Medium
+  { name: "Return", value: 10, fill: "#f87171" }, // Red - Small
+  { name: "Empty", value: 10, fill: "#f4f4f5" }, // Gray - Unfilled
+];

@@ -1,6 +1,22 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { sellingsAndProfits } from "../utiles";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+  ReferenceLine,
+  CartesianGrid,
+} from "recharts";
+import { lineChartData, pieChartData } from "../utiles";
+import AnalyticsPieChart from "../charts/AnalyticsPieChart";
+import SalesLineChart from "../charts/SalesLineChart";
 
 function Overview() {
   const { t } = useTranslation();
@@ -32,6 +48,16 @@ function Overview() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Charts section */}
+      <div className="mt-8 grid grid-cols-1 lg:grid-cols-5 gap-4">
+        <div className="lg:col-span-3">
+          <SalesLineChart />
+        </div>
+        <div className="lg:col-span-2">
+          <AnalyticsPieChart />
+        </div>
       </div>
     </div>
   );
