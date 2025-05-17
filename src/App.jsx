@@ -13,12 +13,12 @@ function App() {
   return (
     // Setting up pages with React router dom @ 6
     <Router>
-      <div className="flex">
+      <div className={`flex`}>
         <div className="hidden md:block">
           <Sidebar />
         </div>
 
-        <div className="flex-1 md:p-10">
+        <div className="flex-1 py-3 md:py-6 px-[29px]">
           <Navbar />
           <Routes>
             <Route path="/" element={<Overview />} />

@@ -1,10 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 @import "tailwindcss";
 @import "tailwindcss/utilities";
 
+/* ✅ Enable DaisyUI directly (v4 feature) */
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark;
+  themes: [
+    {
+      light: {
+        ...require("daisyui/src/colors/themes")["[data-theme=light]"],
+      },
+      dark: {
+        ...require("daisyui/src/colors/themes")["[data-theme=dark]"],
+      },
+    },
+  ];
 }
+
+/* ✅ Add RTL support */
+@layer base {
+  [dir="rtl"] {
+    direction: rtl;
+  }
+
+  [dir="ltr"] {
+    direction: ltr;
+  }
+}
+
+/* ✅ Optional: Custom font */
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 
 .kaushan-script-regular {
   font-family: "Kaushan Script", cursive;

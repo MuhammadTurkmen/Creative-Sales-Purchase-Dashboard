@@ -1,17 +1,16 @@
 import React from "react";
 import { links } from "../utiles.jsx";
 import { NavLink } from "react-router-dom";
-
 import { IoIosLogOut } from "react-icons/io";
 
 function Sidebar() {
   return (
     <nav>
-      <div className=" text-black hidden md:flex md:flex-col justify-between w-[254px]  h-[100vh] py-6 shadow-lg">
+      <div className="bg-base-100 text-base-content hidden md:flex md:flex-col justify-between w-[254px]  h-[100vh] py-6 shadow-lg">
         <div>
           {/* <img src={logo} alt="" /> */}
           <h1 className="kaushan-script-regular text-[25px] pl-[29px]">
-            Easy <span className="text-indigo-600">Sales</span>
+            Easy <span className="text-primary">Sales</span>
           </h1>
           {/* links to the next pages */}
           <div className="flex flex-col gap-1 mt-[40px] ">
@@ -22,19 +21,23 @@ function Sidebar() {
                   key={id}
                   to={path}
                   className={({ isActive }) =>
-                    `py-[20px] px-[35px] flex gap-2 items-center text-[18px] ${
-                      isActive ? "bg-indigo-600 text-white" : ""
-                    } hover:bg-indigo-600 hover:text-white`
+                    `group py-[20px] px-[35px] flex  gap-3 items-center text-[18px] transition-colors duration-300 ${
+                      isActive
+                        ? "bg-primary text-primary-content"
+                        : "hover:bg-primary hover:text-primary-content"
+                    }`
                   }
                 >
-                  {icon}
+                  <span className="transition-transform duration-300 group-hover:rotate-6 ">
+                    {icon}
+                  </span>
                   {text}
                 </NavLink>
               );
             })}
           </div>
         </div>
-        <button className="bg-red-100 py-4 text-[18px] flex justify-center items-center gap-2 text-rose-600 hover:opacity-90 cursor-pointer ">
+        <button className="bg-error text-error-content py-4 text-[18px] flex justify-center items-center gap-2 hover:opacity-90 cursor-pointer ">
           Logout{" "}
           <span className="text-2xl">
             <IoIosLogOut />
