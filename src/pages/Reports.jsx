@@ -1,7 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function Reports() {
-  return <div>Reports</div>;
+  const { t } = useTranslation();
+
+  return (
+    <div>
+      {/* title of the page */}
+      <h1 className="text-3xl font-medium">{t("reports")}</h1>
+    </div>
+  );
 }
 
 export default Reports;
