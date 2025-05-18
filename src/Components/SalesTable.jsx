@@ -25,7 +25,10 @@ function SalesTable() {
         <tbody>
           {filteredSalesData.length === 0 ? (
             <tr>
-              <td colSpan="9" className="text-center py-4 text-base-content/50">
+              <td
+                colSpan="9"
+                className="text-center pb-8 pt-12 text-base-content/50"
+              >
                 {t("noResults")}
               </td>
             </tr>
