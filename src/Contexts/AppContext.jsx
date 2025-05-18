@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import i18n from "../i18n";
+import { salesData } from "../utiles";
 
 // creating context
 const AppContext = createContext();
@@ -16,6 +17,15 @@ export const AppProvider = ({ children }) => {
   const [language, setLanguage] = useState(
     localStorage.getItem("lang") || "en"
   );
+
+  //   state for the sales filter
+  const [salesFilters, setSalesFilters] = useState({
+    date: "",
+    category: "",
+    region: "",
+  });
+
+  const [filteredSalesData, setFilteredSalesData] = useState(salesData);
 
   // function or handlers for the mobile sidebar
   const openMobileSidebar = () => setIsMobileSidebarOpen(true);
@@ -56,6 +66,10 @@ export const AppProvider = ({ children }) => {
         isMobileSidebarOpen,
         openMobileSidebar,
         closeMobileSidebar,
+        salesFilters,
+        setSalesFilters,
+        filteredSalesData,
+        setFilteredSalesData,
       }}
     >
       {children}

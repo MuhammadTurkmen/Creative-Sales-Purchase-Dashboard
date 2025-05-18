@@ -1,20 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { sellingsAndProfits } from "../utiles";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-  PieChart,
-  Pie,
-  Cell,
-  ReferenceLine,
-  CartesianGrid,
-} from "recharts";
-import { lineChartData, pieChartData } from "../utiles";
 import AnalyticsPieChart from "../charts/AnalyticsPieChart";
 import SalesLineChart from "../charts/SalesLineChart";
 import RecentOrders from "../Components/RecentOrders";
@@ -54,7 +40,7 @@ function Overview() {
         ))}
       </div>
 
-      {/* Charts section */}
+      {/* Charts section container */}
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-5 gap-4 items-stretch">
         <div className="lg:col-span-3">
           <SalesLineChart />
@@ -64,7 +50,7 @@ function Overview() {
         </div>
       </div>
 
-      {/* Recent Orders & Top Products */}
+      {/* Recent Orders & Top Products container */}
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-5 gap-4 ">
         <div className="lg:col-span-3">
           <RecentOrders />
