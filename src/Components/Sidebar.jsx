@@ -8,8 +8,8 @@ function Sidebar() {
   const { t } = useTranslation();
 
   return (
-    <nav>
-      <div className="bg-base-100 text-base-content hidden md:flex md:flex-col justify-between w-[254px]  h-[100vh] py-6 shadow-lg">
+    <nav className="w-[254px] hidden md:block">
+      <div className="fixed bg-base-100 text-base-content hidden md:flex md:flex-col justify-between w-[254px]  h-[100vh] py-6 shadow-lg">
         <div>
           {/* <img src={logo} alt="" /> */}
           <h1 className="kaushan-script-regular text-[25px] px-[29px]">
@@ -41,7 +41,9 @@ function Sidebar() {
             })}
           </div>
         </div>
-        <button className="bg-error text-error-content py-4 text-[18px] flex justify-center items-center gap-2 hover:opacity-90 cursor-pointer ">
+
+        {/* logout button */}
+        <button className="hover:bg-error hover:text-error-content py-4 text-[18px] flex justify-center items-center gap-2 hover:opacity-90 cursor-pointer ">
           {t("logout")}{" "}
           <span className="text-2xl">
             <IoIosLogOut />

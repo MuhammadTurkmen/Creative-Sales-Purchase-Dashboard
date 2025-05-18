@@ -8,11 +8,16 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { lineChartData } from "../utiles";
+import { useTranslation } from "react-i18next";
 
 function SalesLineChart() {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-base-100 rounded-xl px-4 py-6 shadow-sm">
-      <h2 className="text-[22px] pl-6 mb-4 font-semibold mb-2">Reports</h2>
+      <h2 className="text-[22px] pl-6 mb-4 font-semibold mb-2">
+        {t("reports")}
+      </h2>
       <ResponsiveContainer width="100%" height={336}>
         <LineChart data={lineChartData}>
           <defs>

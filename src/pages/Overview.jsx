@@ -17,6 +17,8 @@ import {
 import { lineChartData, pieChartData } from "../utiles";
 import AnalyticsPieChart from "../charts/AnalyticsPieChart";
 import SalesLineChart from "../charts/SalesLineChart";
+import RecentOrders from "../Components/RecentOrders";
+import TopSellingProducts from "../Components/TopSellingProducts";
 
 function Overview() {
   const { t } = useTranslation();
@@ -40,9 +42,11 @@ function Overview() {
 
               {/* Card Content */}
               <div>
-                <h3 className="text-sm md:text-base font-semibold">{title}</h3>
+                <h3 className="text-sm md:text-base font-semibold">
+                  {t(title)}
+                </h3>
                 <p className="text-xs md:text-sm text-base-content/70">
-                  {subtitle}
+                  {t(subtitle)}
                 </p>
               </div>
             </div>
@@ -51,12 +55,22 @@ function Overview() {
       </div>
 
       {/* Charts section */}
-      <div className="mt-8 grid grid-cols-1 lg:grid-cols-5 gap-4">
+      <div className="mt-8 grid grid-cols-1 lg:grid-cols-5 gap-4 items-stretch">
         <div className="lg:col-span-3">
           <SalesLineChart />
         </div>
         <div className="lg:col-span-2">
           <AnalyticsPieChart />
+        </div>
+      </div>
+
+      {/* Recent Orders & Top Products */}
+      <div className="mt-8 grid grid-cols-1 lg:grid-cols-5 gap-4 ">
+        <div className="lg:col-span-3">
+          <RecentOrders />
+        </div>
+        <div className="lg:col-span-2">
+          <TopSellingProducts />
         </div>
       </div>
     </div>

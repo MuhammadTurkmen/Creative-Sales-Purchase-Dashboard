@@ -3,16 +3,7 @@
 
 /* Enable DaisyUI directly (v4 feature) */
 @plugin "daisyui" {
-  themes: [
-    {
-      light: {
-        ...require("daisyui/src/colors/themes")["[data-theme=light]"],
-      },
-      dark: {
-        ...require("daisyui/src/colors/themes")["[data-theme=dark]"],
-      },
-    },
-  ];
+  themes: light --default, dark --prefersdark;
 }
 
 /* Add RTL support */
