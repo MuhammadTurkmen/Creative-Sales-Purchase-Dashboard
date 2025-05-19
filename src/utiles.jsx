@@ -5,6 +5,12 @@ import camera from "./assets/camera.jpg";
 import dress from "./assets/dress.jpg";
 import oil from "./assets/oil.jpg";
 import perfume from "./assets/perfume.jpeg";
+import {
+  FaBoxOpen,
+  FaMoneyBillWave,
+  FaTruck,
+  FaCreditCard,
+} from "react-icons/fa";
 
 // links for Navbar, sidebar, and mobile sidebar
 export const links = [
@@ -242,15 +248,191 @@ export const salesData = [
     total: "AF 1,000",
     date: "2025-05-07",
   },
+  // {
+  //   id: "S-AF010",
+  //   product: "Lenovo Yoga",
+  //   category: "Laptop",
+  //   region: "Kandahar",
+  //   customer: "Fereshta Wahdat",
+  //   qty: 1,
+  //   unitPrice: "AF 95,000",
+  //   total: "AF 95,000",
+  //   date: "2025-05-08",
+  // },
+];
+
+// Summary card data for the sales page
+
+export const salesSummary = [
   {
-    id: "S-AF010",
-    product: "Lenovo Yoga",
-    category: "Laptop",
-    region: "Kandahar",
-    customer: "Fereshta Wahdat",
-    qty: 1,
-    unitPrice: "AF 95,000",
-    total: "AF 95,000",
+    id: 1,
+    icon: <FiSettings />,
+    color: "text-primary",
+    bg: "bg-primary/10",
+    title: "AF 135,750",
+    subtitle: "totalSalesMonth",
+  },
+  {
+    id: 2,
+    icon: <FiSettings />,
+    color: "text-warning",
+    bg: "bg-warning/10",
+    title: "7Orders",
+    subtitle: "totalOrders",
+  },
+  {
+    id: 3,
+    icon: <FiSettings />,
+    color: "text-error",
+    bg: "bg-error/10",
+    title: "Kabul",
+    subtitle: "bestsellingregion",
+  },
+  {
+    id: 4,
+    icon: <FiSettings />,
+    color: "text-success",
+    bg: "bg-success/10",
+    title: "cash",
+    subtitle: "mostusedpayment",
+  },
+];
+
+// purcheses page data
+
+export const purchasesData = [
+  {
+    id: "P001",
+    product: "Printer",
+    category: "electronics",
+    supplier: "HP Supplies",
+    qty: 5,
+    unitPrice: "AF 120",
+    total: "AF 600",
+    region: "North",
+    date: "2025-05-01",
+  },
+  {
+    id: "P002",
+    product: "Office Chair",
+    category: "furniture",
+    supplier: "Comfort Co",
+    qty: 10,
+    unitPrice: "AF 75",
+    total: "AF 750",
+    region: "West",
+    date: "2025-05-02",
+  },
+  {
+    id: "P003",
+    product: "Laptop",
+    category: "electronics",
+    supplier: "Tech Mart",
+    qty: 3,
+    unitPrice: "AF 850",
+    total: "AF 2550",
+    region: "East",
+    date: "2025-05-03",
+  },
+  {
+    id: "P004",
+    product: "Paper Reams",
+    category: "stationery",
+    supplier: "Office Supplies Ltd",
+    qty: 20,
+    unitPrice: "AF 5",
+    total: "AF 100",
+    region: "South",
+    date: "2025-05-04",
+  },
+  {
+    id: "P005",
+    product: "Desk",
+    category: "furniture",
+    supplier: "Comfort Co",
+    qty: 4,
+    unitPrice: "AF 300",
+    total: "AF 1200",
+    region: "North",
+    date: "2025-05-05",
+  },
+  {
+    id: "P006",
+    product: "Router",
+    category: "electronics",
+    supplier: "NetWorld",
+    qty: 6,
+    unitPrice: "AF 60",
+    total: "AF 360",
+    region: "West",
+    date: "2025-05-06",
+  },
+  {
+    id: "P007",
+    product: "Whiteboard",
+    category: "stationery",
+    supplier: "Office Supplies Ltd",
+    qty: 2,
+    unitPrice: "AF 90",
+    total: "AF 180",
+    region: "East",
+    date: "2025-05-07",
+  },
+  {
+    id: "P008",
+    product: "Mouse",
+    category: "electronics",
+    supplier: "Tech Mart",
+    qty: 12,
+    unitPrice: "AF 25",
+    total: "AF 300",
+    region: "South",
     date: "2025-05-08",
+  },
+  {
+    id: "P009",
+    product: "Bookshelf",
+    category: "furniture",
+    supplier: "WoodWorks",
+    qty: 3,
+    unitPrice: "AF 200",
+    total: "AF 600",
+    region: "North",
+    date: "2025-05-09",
+  },
+];
+
+export const purchasesSummary = [
+  {
+    id: "1",
+    icon: <FaBoxOpen />,
+    title: "1,320",
+    subtitle: "itemsPurchased",
+    color: "text-blue-600",
+    bg: "bg-blue-100",
+  },
+  {
+    id: "2",
+    icon: <FaMoneyBillWave />,
+    title: "AF 2,340,000",
+    subtitle: "totalSpent",
+    color: "text-green-600",
+    bg: "bg-green-100",
+  },
+  {
+    id: "3",
+    icon: <FaTruck />,
+    title: "Office Supplies Ltd",
+    subtitle: "frequentSupplier",
+    color: "text-yellow-600",
+    bg: "bg-yellow-100",
+  },
+  {
+    id: "4",
+    icon: <FaCreditCard />,
+    title: "banktransfer",
+    subtitle: "paymentMode",
+    color: "text-purple-600",
+    bg: "bg-purple-100",
   },
 ];

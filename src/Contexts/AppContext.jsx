@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import i18n from "../i18n";
-import { salesData } from "../utiles";
+import { purchasesData, salesData } from "../utiles";
 
 // creating context
 const AppContext = createContext();
@@ -26,6 +26,39 @@ export const AppProvider = ({ children }) => {
   });
 
   const [filteredSalesData, setFilteredSalesData] = useState(salesData);
+
+  const handleSearch = () => {
+    const filtered = salesData.filter((item) => {
+      return (
+        (!salesFilters.date || item.date === salesFilters.date) &&
+        (!salesFilters.category || item.category === salesFilters.category) &&
+        (!salesFilters.region || item.region === salesFilters.region)
+      );
+    });
+    setFilteredSalesData(filtered);
+  };
+
+  //   functionality and state for purchases page
+  const [purchaseFilters, setPurchaseFilters] = useState({
+    date: "",
+    category: "",
+    region: "",
+  });
+
+  const [filteredPurchasesData, setFilteredPurchasesData] =
+    useState(purchasesData);
+
+  const handlePurchaseSearch = () => {
+    const filtered = purchasesData.filter((item) => {
+      return (
+        (!purchaseFilters.date || item.date === purchaseFilters.date) &&
+        (!purchaseFilters.category ||
+          item.category === purchaseFilters.category) &&
+        (!purchaseFilters.region || item.region === purchaseFilters.region)
+      );
+    });
+    setFilteredPurchasesData(filtered);
+  };
 
   // function or handlers for the mobile sidebar
   const openMobileSidebar = () => setIsMobileSidebarOpen(true);
@@ -70,6 +103,12 @@ export const AppProvider = ({ children }) => {
         setSalesFilters,
         filteredSalesData,
         setFilteredSalesData,
+        handleSearch,
+        purchaseFilters,
+        setPurchaseFilters,
+        filteredPurchasesData,
+        setFilteredPurchasesData,
+        handlePurchaseSearch,
       }}
     >
       {children}

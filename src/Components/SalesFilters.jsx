@@ -5,7 +5,7 @@ import { salesData } from "../utiles";
 
 function SalesFilters({ onSearch }) {
   const { t } = useTranslation();
-  const { salesFilters, setSalesFilters } = useAppContext();
+  const { salesFilters, setSalesFilters, handleSearch } = useAppContext();
 
   const uniqueDates = [...new Set(salesData.map((d) => d.date))];
   const uniqueCategories = [...new Set(salesData.map((d) => d.category))];
@@ -60,7 +60,7 @@ function SalesFilters({ onSearch }) {
       </select>
 
       {/* Search Button */}
-      <button className="btn btn-primary w-full text-lg" onClick={onSearch}>
+      <button className="btn btn-primary w-full text-lg" onClick={handleSearch}>
         {t("search")}
       </button>
     </div>
