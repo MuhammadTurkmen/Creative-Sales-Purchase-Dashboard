@@ -43,10 +43,10 @@ function Welcome() {
             </li>
           </ul>
           <div className="mt-6 flex gap-4">
-            <SignInButton>
+            <SignInButton redirectUrl="/">
               <button className="btn btn-primary">{t("login")}</button>
             </SignInButton>
-            <SignUpButton>
+            <SignUpButton redirectUrl="/">
               <button className="btn border border-indigo-500 text-indigo-500">
                 {t("signup")}
               </button>
