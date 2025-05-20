@@ -1,12 +1,45 @@
-# React + Vite
+# EasySales Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, multilingual Sales & Purchase Dashboard built with **React**, **Vite**, and **Tailwind CSS**. This app helps businesses manage their **inventory**, **sales**, and **purchases**, all from a clean, responsive dashboard with RTL support and dark mode.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔐 Authentication via [Clerk](https://clerk.dev)
+- 🌙 Dark/Light Mode toggle
+- 🌐 Multilingual (English & فارسی) with RTL support
+- 📦 Inventory, Sales, Purchases, and Reports management
+- 📊 Dashboard charts & summaries
+- 📁 Context API for global state (theme, filters, language)
+- 📱 Responsive and mobile-friendly design
+- ⚙️ Protected routes with redirection after login/signup
+- 📋 Clean sidebar and top navigation
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+- **React + Vite**
+- **Tailwind CSS v4** + **DaisyUI**
+- **React Router DOM**
+- **Clerk for authentication**
+- **i18next** for internationalization
+- **Lucide & React Icons**
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/easysales-dashboard.git
+cd easysales-dashboard
+```
+
+npm install
+
+## 🧪 Running the Project Locally
+
+npm run dev
+
+http://localhost:5173
