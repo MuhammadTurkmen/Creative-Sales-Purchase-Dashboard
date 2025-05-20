@@ -3,6 +3,7 @@ import { links } from "../utiles.jsx";
 import { NavLink } from "react-router-dom";
 import { IoIosLogOut } from "react-icons/io";
 import { useTranslation } from "react-i18next";
+import { SignOutButton } from "@clerk/clerk-react";
 
 function Sidebar() {
   const { t } = useTranslation();
@@ -43,12 +44,14 @@ function Sidebar() {
         </div>
 
         {/* logout button */}
-        <button className="hover:bg-error hover:text-error-content py-4 text-[18px] flex justify-center items-center gap-2 hover:opacity-90 cursor-pointer ">
-          {t("logout")}{" "}
-          <span className="text-2xl">
-            <IoIosLogOut />
-          </span>
-        </button>
+        <SignOutButton redirectUrl="/welcome">
+          <button className="hover:bg-error hover:text-error-content py-4 text-[18px] flex justify-center items-center gap-2 hover:opacity-90 cursor-pointer w-full">
+            {t("logout")}{" "}
+            <span className="text-2xl">
+              <IoIosLogOut />
+            </span>
+          </button>
+        </SignOutButton>
       </div>
     </nav>
   );
