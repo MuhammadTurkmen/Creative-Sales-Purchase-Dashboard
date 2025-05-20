@@ -44,7 +44,7 @@ function Sidebar() {
         </div>
 
         {/* logout button */}
-        <SignOutButton redirectUrl="/welcome">
+        <SignOutButton redirecturl="/welcome">
           <button className="hover:bg-error hover:text-error-content py-4 text-[18px] flex justify-center items-center gap-2 hover:opacity-90 cursor-pointer w-full">
             {t("logout")}{" "}
             <span className="text-2xl">

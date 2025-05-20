@@ -3,10 +3,13 @@ import { useAppContext } from "../Contexts/AppContext";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoMdMenu } from "react-icons/io";
+import { Link } from "react-router-dom";
+import { useUser } from "@clerk/clerk-react";
 
 function Navbar() {
   const { darkMode, toggleDarkMode, openMobileSidebar } = useAppContext();
   const isRTL = document.documentElement.dir === "rtl";
+  const { user, isSignedIn } = useUser();
 
   // Determine animation position and also for the RTL and LTR
   const knobPosition = darkMode
@@ -17,6 +20,13 @@ function Navbar() {
     ? "translate-x-[28px]"
     : "translate-x-0";
 
+  const getInitials = () => {
+    if (!user) return "";
+    const first = user.firstName?.charAt(0) || "";
+    const last = user.lastName?.charAt(0) || "";
+    return (first + last).toUpperCase();
+  };
+
   return (
     <div className="flex justify-between items-center md:justify-end mb-2">
       {/* logo for mobile */}
@@ -25,11 +35,13 @@ function Navbar() {
       </h1>
 
       <div className="flex items-center gap-3 md:gap-4">
-        <div>
+        {/* users name */}
+        <Link to={"/settings"}>
           <span className="bg-primary text-white px-[8px] py-[10px] text-[16px] rounded-full">
-            MT
+            {getInitials()}
           </span>
-        </div>
+        </Link>
+
         <span className="text-2xl hidden md:text-3xl md:block">
           <IoMdNotificationsOutline />
         </span>
