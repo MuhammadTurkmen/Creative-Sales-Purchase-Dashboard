@@ -36,7 +36,9 @@ function PurchasesFilters() {
       >
         <option value="">{t("category")}</option>
         {uniqueCategories.map((d) => (
-          <option key={d}>{d}</option>
+          <option key={d} value={d}>
+            {t(d)}
+          </option>
         ))}
       </select>
 
@@ -49,7 +51,9 @@ function PurchasesFilters() {
       >
         <option value="">{t("region")}</option>
         {uniqueRegions.map((r) => (
-          <option key={r}>{r}</option>
+          <option key={r} value={r}>
+            {t(r)}
+          </option>
         ))}
       </select>
 
