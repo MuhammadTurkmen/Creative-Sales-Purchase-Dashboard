@@ -1,5 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { inventoryCardData } from "../utiles";
+import InventoryTable from "../Components/InventoryTable";
 
 function Inventory() {
   const { t } = useTranslation();
@@ -8,6 +10,34 @@ function Inventory() {
     <div>
       {/* title of the page */}
       <h1 className="text-3xl font-medium">{t("inventory")}</h1>
+
+      <div>
+        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+          {inventoryCardData.map(({ icon, title, subtitle, color, bg, id }) => (
+            <div key={id} className="card bg-base-200 shadow-md">
+              <div className="card-body flex flex-row items-center gap-4 px-4 py-6 ">
+                {/* Icon Bubble */}
+                <span className={`p-3 rounded-full text-xl ${color} ${bg}`}>
+                  {icon}
+                </span>
+
+                {/* Card Content */}
+                <div>
+                  <h3 className="text-sm md:text-base font-semibold">
+                    {t(title)}
+                  </h3>
+                  <p className="text-xs md:text-sm text-base-content/70">
+                    {t(subtitle)}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="grid overflow-x-auto">
+        <InventoryTable />
+      </div>
     </div>
   );
 }
