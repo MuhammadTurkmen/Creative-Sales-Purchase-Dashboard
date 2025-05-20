@@ -205,6 +205,17 @@ const resources = {
       language: "Language",
       edit: "Edit",
       save_changes: "Save Changes",
+
+      heading: "Welcome to",
+      description:
+        "A modern, lightweight dashboard for managing your sales, purchases, and inventory — all in one place.",
+      feature1: "Track sales and purchases",
+      feature2: "View reports and analytics",
+      feature3: "Monitor inventory and low stock",
+
+      login: "Login",
+      signup: "Sign Up",
+      logout: "Logout",
     },
   },
 
@@ -412,6 +423,17 @@ const resources = {
       language: "زبان",
       edit: "ویرایش",
       save_changes: "ذخیره تغییرات",
+
+      heading: "خوش آمدید به",
+      description:
+        "یک داشبورد مدرن و سبک برای مدیریت فروش، خرید و موجودی — همه در یک مکان.",
+      feature1: "پیگیری فروش و خریدها",
+      feature2: "مشاهده گزارش‌ها و تحلیل‌ها",
+      feature3: "نظارت بر موجودی و کمبود کالا",
+
+      login: "ورود",
+      signup: "ثبت‌نام",
+      logout: "خروج",
     },
   },
 };
